@@ -1,6 +1,8 @@
 package nextstep.member.application;
 
 import nextstep.member.MemberNotFoundException;
+import nextstep.member.application.dto.GithubLoginRequest;
+import nextstep.member.application.dto.GithubLoginResponse;
 import nextstep.member.application.dto.TokenRequest;
 import nextstep.member.application.dto.TokenResponse;
 import nextstep.member.domain.Member;
@@ -39,5 +41,9 @@ public class LoginService {
         if (!member.getPassword().equals(tokenRequest.getPassword())) {
             throw new MemberNotFoundException("잘못된 비밀번호 입니다.");
         }
+    }
+
+    public GithubLoginResponse getAccessToken(GithubLoginRequest githubLoginRequest) {
+        return new GithubLoginResponse();
     }
 }
