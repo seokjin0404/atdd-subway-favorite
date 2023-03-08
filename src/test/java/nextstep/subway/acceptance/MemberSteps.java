@@ -97,4 +97,12 @@ public class MemberSteps {
                 .then().log().all()
                 .extract();
     }
+
+    public static ExtractableResponse<Response> 토큰으로_내_정보_조회_요청(String accessToken) {
+        return RestAssured.given().auth().oauth2(accessToken)
+                .log().all()
+                .when().get("/members/me")
+                .then().log().all()
+                .extract();
+    }
 }
