@@ -7,7 +7,7 @@ public class GithubLoginResponse {
         this.accessToken = accessToken;
     }
 
-    public String getAccesToken() {
+    public String getAccessToken() {
         return accessToken;
     }
 }

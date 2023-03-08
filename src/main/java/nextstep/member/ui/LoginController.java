@@ -26,6 +26,6 @@ public class LoginController {
 
     @PostMapping("/login/github")
     public ResponseEntity<GithubLoginResponse> githubLogin(@RequestBody GithubLoginRequest githubLoginRequest) {
-        return ResponseEntity.ok().body(loginService.getAccessToken(githubLoginRequest));
+        return ResponseEntity.ok().body(loginService.githubLogin(githubLoginRequest));
     }
 }

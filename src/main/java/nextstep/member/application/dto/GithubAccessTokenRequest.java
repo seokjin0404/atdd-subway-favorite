@@ -10,5 +10,4 @@ public class GithubAccessTokenRequest {
         this.clientId = clientId;
         this.clientSecret = clientSecret;
     }
-
 }
